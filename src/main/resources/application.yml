@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: reactive_parsing
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/authdb
+    username: root
+    password: root
+  data:
+    r2dbc:
+      pool:
+        max-size: 20
+        initial-size: 5
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
